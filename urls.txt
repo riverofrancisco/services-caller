@@ -1,0 +1,2 @@
+https://vuatlthumrldfswjltxm.supabase.co/storage/v1/object/public/pictures/galleryOficial/Foto%201.webp
+https://soylina.vercel.app/home/gallery

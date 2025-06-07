@@ -1,0 +1,27 @@
+name: Call Services every 4 days
+
+on:
+  schedule:
+    - cron: '0 12 */4 * *'  # Cada 4 días a las 12:00 UTC
+  workflow_dispatch:        # Para poder ejecutarlo manualmente
+
+jobs:
+  call-services:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Read URLs from file into array and call each one
+        run: |
+          echo "Reading URLs from file..."
+
+          # Leer las URLs en un array bash
+          mapfile -t URLS < urls.txt
+
+          for URL in "${URLS[@]}"
+          do
+            echo "Calling: $URL"
+            curl -s -w "HTTP: %{http_code}\n" -o /dev/null "$URL"
+          done
