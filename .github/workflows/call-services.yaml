@@ -2,7 +2,7 @@ name: Call Services every 4 days
 
 on:
   schedule:
-    - cron: '0 12 */4 * *'  # Cada 4 días a las 12:00 UTC
+    - cron: '*/5 * * * *'  # Cada 4 días a las 12:00 UTC
   workflow_dispatch:        # Para poder ejecutarlo manualmente
 
 jobs:
