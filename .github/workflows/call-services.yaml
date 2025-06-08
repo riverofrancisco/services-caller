@@ -1,9 +1,9 @@
-name: Call Services every 4 days
+name: Call Services every 2 days
 
 on:
   schedule:
-    - cron: '*/5 * * * *'  # Cada 4 días a las 12:00 UTC
-  workflow_dispatch:        # Para poder ejecutarlo manualmente
+    - cron: '0 12 */2 * *'  # Cada 2 días a las 12:00 UTC
+  workflow_dispatch:
 
 jobs:
   call-services:
@@ -17,7 +17,6 @@ jobs:
         run: |
           echo "Reading URLs from file..."
 
-          # Leer las URLs en un array bash
           mapfile -t URLS < urls.txt
 
           for URL in "${URLS[@]}"
