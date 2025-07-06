@@ -2,3 +2,4 @@ https://vuatlthumrldfswjltxm.supabase.co/storage/v1/object/public/pictures/galle
 https://soylina.vercel.app/home/gallery
 https://hdokvvmrynsirskxwpay.supabase.co/storage/v1/object/public/pictures//6(1)recortado.png
 https://linarivero.com.ar/home
+https://aemzmlsfwgajxqiwclag.supabase.co/storage/v1/object/public/pictures/events/cards/toma1.webp
